@@ -27,7 +27,7 @@ curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($data));
 
 curl_setopt($curl, CURLOPT_HTTPHEADER, [
     'X-RapidAPI-Host: kvstore.p.rapidapi.com',
-    'X-RapidAPI-Key: 62eae805a7msh52381101743653ep156eefjsne450aecd2942',
+    
     'Content-Type: application/json'
 ]);
 
