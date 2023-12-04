@@ -20,3 +20,9 @@ curl_setopt($curl, CURLOPT_HTTPHEADER, [
     'X-RapidAPI-Key:' .$_ENV["RAPIDAPI_KEY"],
     'Content-Type: application/json'
 ]);
+
+$response = curl_exec($curl);
+
+curl_close($curl);
+
+echo $response . "\n";
