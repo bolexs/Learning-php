@@ -1,4 +1,9 @@
 <?php
+require __DIR__ . '/vendor/autoload.php';
+
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/');
+$dotenv->load();
+
 
 // kvstore api url using to learn api 
 $url = 'https://kvstore.p.rapidapi.com/collections';
@@ -27,7 +32,7 @@ curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($data));
 
 curl_setopt($curl, CURLOPT_HTTPHEADER, [
     'X-RapidAPI-Host: kvstore.p.rapidapi.com',
-    
+    'X-RapidAPI-Key:' .$_ENV["RAPIDAPI_KEY"],
     'Content-Type: application/json'
 ]);
 
